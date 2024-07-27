@@ -87,18 +87,50 @@ select {
     transform: translateY(-4px);
 }
 
+/* header*/
 header .mobile-header {
     padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header button {
     all: unset;
 }
 
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+header nav ul {
+    display: flex;
+    gap: 24px;
+    margin-right: 16px;
+    }
+
+header .mobile-header .hamburger-icon {
+    display: none;
+    }
+}
+
+
+/* logo*/
 .logo {
     height: 50px;
 }
 
+@media (min-width: 768px) {
+    .logo {
+        height: 100px;
+    }
+}
+
+/* mobile nav */
 .mobile-nav a {
     text-decoration: none;
     color: var(--black);
@@ -106,10 +138,24 @@ header button {
     padding: 4px 16px;
 }
 
+/* desktop nav */
 .desktop-nav {
     display: none;
 }
 
+@media (min-width: 768px) {
+    .desktop-nav a {
+        text-decoration: none;
+        font-size: larger;
+        color: var(--black);
+    }
+
+    .desktop-nav {
+        display: inline-block;
+    }
+}
+
+/* hamburger icon */
 .hamburger-icon {
     height: 50px;
 }
@@ -129,6 +175,32 @@ header button {
 
 .hero .hero-accent {
     color: var(--action);
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 120px 56px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        max-width: 70%;
+    }
+}
+
+/* articles container */
+@media (min-width: 768px) {
+    .articles-container {
+        display: flex;
+    }
+}
+
+/* article */
+
+@media (min-width: 768px) {
+    article {
+        padding: 56px;
+    }
 }
 
 article {
@@ -158,6 +230,8 @@ article .article-heading h2 {
 article p {
     margin-bottom: 16px;
 }
+
+/* contact form */
 
 .contact-form {
     padding: 48px 16px;
@@ -196,9 +270,25 @@ article p {
     cursor: pointer;
 }
 
+@media (min-width: 768px) {
+    .contact-form h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .contact-form form {
+        max-width: 60%;
+        margin: 40px auto;
+    }
+}
+
+/* footer */
+
 footer {
     padding: 16px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 footer a:has(img) {
@@ -209,3 +299,15 @@ footer a:has(img) {
     width: 50px;
     height: 50px;
 }
+
+@media (min-width: 768px) {
+    footer {
+        justify-content: center;
+    }
+
+    footer .socials-icon {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
